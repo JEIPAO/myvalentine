@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="valentine.css" />
+  </head>
+  <body>
+    <div id="valentineQuestion"><b>Hi Mary Jane <br/>Will you be my valentine?</b></div>
+    <!-- <button class="answerButton" onclick="location.href='thankyou.html'">
+  Yes
+    </button> -->
+      <!-- HTML !-->
+       <br />
+    
+    <button class="heart-btn" onclick="location.href='loveletter2.html'">
+  <span class="text">YES PLEASE</span>
+  <span class="heart-icon"></span>
+</button>
+    
+    <button class="button-82-pushable" id="noButton">
+        <span class="button-82-shadow"></span>
+      <span class="button-82-edge"></span>
+      <span class="button-82-front text">
+        NO
+        </span>
+      </button>
+    <br />
+    <!-- <img src="cat.gif" alt="cat asking question" class="responsive" /> -->
+
+    <script>
+      const noButton = document.getElementById("noButton");
+      function moveNoButtonAnywhere() {
+        // Get viewport dimensions
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        // Get button dimensions
+        const btnRect = noButton.getBoundingClientRect();
+        const btnWidth = btnRect.width;
+        const btnHeight = btnRect.height;
+        // Calculate random position anywhere within viewport
+        const left = Math.random() * (vw - btnWidth);
+        const top = Math.random() * (vh - btnHeight);
+        // Set position
+        noButton.style.position = "fixed";
+        noButton.style.left = left + "px";
+        noButton.style.top = top + "px";
+      }
+      if (noButton) {
+        noButton.addEventListener("mouseover", moveNoButtonAnywhere);
+      }
+
+      // Optional: Keep your previous click event for YES button
+     
+        </script>
+  </body>
+</html>
